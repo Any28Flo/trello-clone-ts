@@ -12,5 +12,10 @@ html,body,#root{
   --primary: #3179ba;
   --secondary : #ebecf0;
   --tertiary : #fff;
+  --black: #000;
+
   --gray-400: #091e4240;
+  --gray-300: #ffffff3d;
+  --gray-200: #ffffff52;
+
 }
