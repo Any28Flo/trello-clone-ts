@@ -4,8 +4,6 @@ function App() {
 
   return (
     <AppContainer>
-      <h1>Vite + React</h1>
-
     </AppContainer>
   )
 }
