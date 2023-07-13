@@ -7,7 +7,7 @@ function App() {
   return (
     <AppContainer>
       <Column title='My title'>
-          <Card  title='my card'/>
+
       </Column>
     </AppContainer>
   )
