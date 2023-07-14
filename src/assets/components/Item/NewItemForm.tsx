@@ -1,19 +1,25 @@
-import {useState} from "react";
+import { useState } from "react";
 
-import {NewItemFormContainer} from "../../styles/styles";
-import {NewItemButton} from "../../styles/styles";
-import {NewItemInput} from "../../styles/styles";
+import { NewItemFormContainer } from "../../styles/styles";
+import { NewItemButton } from "../../styles/styles";
+import { NewItemInput } from "../../styles/styles";
 
+import { useFocus } from "../../utils/useFocus";
 
 type NewItemFormType = {
-    onAdd: (text:string) => void
+    onAdd: (text: string) => void
 }
-export const NewItemForm = ({onAdd} : NewItemFormType) => {
+export const NewItemForm = ({ onAdd }: NewItemFormType) => {
     const [text, setText] = useState("");
+
+    const inputRef = useFocus();
 
     return (
         <NewItemFormContainer>
-            <NewItemInput value={text} onChange={e => setText(e.target.value) }/>
+            <NewItemInput
+                ref={inputRef}
+                value={text}
+                onChange={e => setText(e.target.value)} />
             <NewItemButton onClick={() => onAdd(text)} >
                 Create
             </NewItemButton>
