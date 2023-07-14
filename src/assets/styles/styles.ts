@@ -4,6 +4,16 @@ type AddItemButtonProps = {
     dark?: boolean
 }
 
+export const AppContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: var(--primary);
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+`;
+
 export const ColumnContainer = styled.div`
   background-color: var(--secondary);
   width: 300px;
@@ -31,11 +41,12 @@ export const CardContainer = styled.div`
 `;
 
 export const AddItemButton = styled.button<AddItemButtonProps>`
+  color : ${({dark})=> dark  ? "#000" : "#fff"};
   background-color: var(--gray-300);
   border-radius: 3px;
   border: none;
   cursor: pointer;
-  color: ${props => (props.dark ? "#000" : "#fff")};  max-width: 300px;
+  max-width: 300px;
   padding: 10px 12px;
   text-align: left;
   transition: background 85ms ease-in;
@@ -43,8 +54,8 @@ export const AddItemButton = styled.button<AddItemButtonProps>`
   &:hover{
     background-color: #ffffff52;
   }
-  
 `;
+
 export const NewItemFormContainer = styled.div`
   max-width: 300px;
   display: flex;

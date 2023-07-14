@@ -1,14 +1,13 @@
-import { AppContainer } from "./assets/components/Layout/appContainer";
-import {Column} from "./assets/components/Layout/Column";
-import {Card} from "./assets/components/DataDisplay/Card";
+import { AppContainer } from "./assets/styles/styles";
+import { AddNewItem } from "./assets/components/Item/AddNewItem";
 
 function App() {
-
+  const handleAdd = () => {
+    console.log("si")
+  }
   return (
     <AppContainer>
-      <Column title='My title'>
-
-      </Column>
+      <AddNewItem onAdd={() => handleAdd()} toggleButtonText={"add"} />
     </AppContainer>
   )
 }
